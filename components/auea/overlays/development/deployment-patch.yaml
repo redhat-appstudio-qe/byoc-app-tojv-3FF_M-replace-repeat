@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: auea
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-xxzf-tenant/byoc-app-tojv/auea@sha256:07b90d1a5bb164ab34f56d6630164ea08c130d9fefe29478b75984032a3e9912
+        name: my-java-quarkus
+        resources: {}
+status: {}
